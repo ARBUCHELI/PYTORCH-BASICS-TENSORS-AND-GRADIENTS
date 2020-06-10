@@ -8,42 +8,47 @@ Original file is located at
 
 **Tensors**
 
-At its core, PyTorch is a library for processing tensors. A tensor is a number, vector, matrix or any n-dimensional array. Let's create a tensor with a single number:
+At its core, PyTorch is a library for processing tensors. A tensor is a number, vector, matrix or any n-dimensional array. Let's create
+a tensor with a single number:
 """
 
-import torch
+import torch # Command used to import the library.
 
 # Number
-t1 = torch.tensor(4.)
+t1 = torch.tensor(4.) # Command used to create a Pytorch tensor.
 t1
 
 
 
-"""4. is a shorthand for 4.0. It is used to indicate to Python (and PyTorch) that you want to create a floating point number. We can verify this by checking the dtype attribute of our tensor:"""
+"""4. is a shorthand for 4.0. It is used to indicate to Python (and PyTorch) that you want to create a floating point number. We can
+verify this by checking the dtype attribute of our tensor:"""
 
-t1.dtype
+t1.dtype # Command used to verify the type.
 
 """Let's try creating slightly more complex tensors:"""
 
 # Vector
-t2 = torch.tensor([1., 2, 3, 4])
+t2 = torch.tensor([1., 2, 3, 4]) # Command used to create a vector (1-D array).
 t2
 
 # Matrix
-t3 = torch.tensor([[5., 6], 
+# Command used to create a 2-D array.
+t3 = torch.tensor([[5., 6], # Command used to create a 2-D array.
                    [7, 8], 
                    [9, 10]])
 t3
 
 # 3-dimensional array
-t4 = torch.tensor([
+# Command used to create a 3-D array.
+t4 = torch.tensor([ 
     [[11, 12, 13], 
      [13, 14, 15]], 
     [[15, 16, 17], 
      [17, 18, 19.]]])
 t4
 
-"""Tensors can have any number of dimensions, and different lengths along each dimension. We can inspect the length along each dimension using the .shape property of a tensor."""
+"""Tensors can have any number of dimensions, and different lengths along each dimension. We can inspect the length along each dimension
+using the .shape property of a tensor."""
 
 print(t1)
 t1.shape
@@ -68,7 +73,8 @@ w = torch.tensor(4., requires_grad=True)
 b = torch.tensor(5., requires_grad=True)
 x, w, b
 
-"""We've created 3 tensors x, w and b, all numbers. w and b have an additional parameter requires_grad set to True. We'll see what it does in just a moment.
+"""We've created 3 tensors x, w and b, all numbers. w and b have an additional parameter requires_grad set to True. We'll see what it 
+does in just a moment.
 
 Let's create a new tensor y by combining these tensors:
 """
@@ -77,7 +83,9 @@ Let's create a new tensor y by combining these tensors:
 y = w * x + b
 y
 
-"""As expected, y is a tensor with the value 3 * 4 + 5 = 17. What makes PyTorch special is that we can automatically compute the derivative of y w.r.t. the tensors that have requires_grad set to True i.e. w and b. To compute the derivatives, we can call the .backward method on our result y."""
+"""As expected, y is a tensor with the value 3 * 4 + 5 = 17. What makes PyTorch special is that we can automatically compute the 
+derivative of y w.r.t. (with respect to) the tensors that have requires_grad set to True i.e. w and b. To compute the derivatives, we 
+can call the .backward method on our result y."""
 
 # Compute derivatives
 y.backward()
@@ -89,13 +97,15 @@ print('dy/dx:', x.grad)
 print('dy/dw:', w.grad)
 print('dy/db:', b.grad)
 
-"""As expected, dy/dw has the same value as x i.e. 3, and dy/db has the value 1. Note that x.grad is None, because x doesn't have requires_grad set to True.
+"""As expected, dy/dw has the same value as x i.e. 3, and dy/db has the value 1. Note that x.grad is None, because x doesn't have 
+requires_grad set to True.
 
 The "grad" in w.grad stands for gradient, which is another term for derivative, used mainly when dealing with matrices.
 
 **Interoperability with Numpy** 
 
-Numpy is a popular open source library used for mathematical and scientific computing in Python. It enables efficient operations on large multi-dimensional arrays, and has a large ecosystem of supporting libraries:
+Numpy is a popular open source library used for mathematical and scientific computing in Python. It enables efficient operations on 
+large multi-dimensional arrays, and has a large ecosystem of supporting libraries:
 
 *   Matplotlib for plotting and visualization
 *   OpenCV for image and video processing
@@ -106,15 +116,15 @@ Instead of reinventing the wheel, PyTorch interoperates really well with Numpy t
 Here's how we create an array in Numpy:
 """
 
-import numpy as np
+import numpy as np # Command used to import Numpy.
 
-x = np.array([[1, 2], [3, 4.]])
+x = np.array([[1, 2], [3, 4.]]) # Creation of a 2-D array.
 x
 
 """We can convert a Numpy array to a PyTorch tensor using torch.from_numpy."""
 
 # Convert the numpy array to a torch tensor.
-y = torch.from_numpy(x)
+y = torch.from_numpy(x) # Command used to convert the numpy array to a torch tensor.
 y
 
 """Let's verify that the numpy array and torch tensor have similar data types."""
