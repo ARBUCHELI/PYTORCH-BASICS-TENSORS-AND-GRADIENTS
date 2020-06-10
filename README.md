@@ -2,6 +2,8 @@
 
 This is a pedagogic Python script used to study Pytorch Library and its use in Machine Learning, Deep Learning and Artificial Intelligence.
 
+![foto](https://raw.githubusercontent.com/ARBUCHELI/PYTORCH-BASICS-TENSORS-AND-GRADIENTS/master/Sin%20t%C3%ADtulo.jpg)
+
 ### Interoperability with Numpy
 
 Numpy is a popular open source library used for mathematical and scientific computing in Python. It enables efficient operations on 
