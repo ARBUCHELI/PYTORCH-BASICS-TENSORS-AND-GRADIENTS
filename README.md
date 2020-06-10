@@ -19,6 +19,6 @@ large multi-dimensional arrays, and has a large ecosystem of supporting librarie
 2. Or find the [original jupyter notebook](https://colab.research.google.com/gist/ARBUCHELI/00464b8813904a69e0598805f584788e/pytorch-basics-tensors-and-gradients.ipynb) and run the cells in Google Colab.
 
 # Author: Andrés R. Bucheli.
-(Based in Udemy - Deep Learning with PyTorch - Zero to GANs)
+(Inspired in Deep Learning with PyTorch - Zero to GANs - Udemy)
 
 
