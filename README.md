@@ -1,6 +1,6 @@
 # PYTORCH-BASICS-TENSORS-AND-GRADIENTS
 
-This is a pedagogic Python script used to study Pytorch Library and its use in Machine Learning.
+This is a pedagogic Python script used to study Pytorch Library and its use in Machine Learning, Deep Learning and Artificial Intelligence.
 
 ### Interoperability with Numpy
 
@@ -14,6 +14,9 @@ large multi-dimensional arrays, and has a large ecosystem of supporting librarie
 <strong>INSTRUCTIONS</strong>
 
 1. Type each line of code in [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb).
+2. Or find the [original jupyter notebook] (https://colab.research.google.com/gist/ARBUCHELI/00464b8813904a69e0598805f584788e/pytorch-basics-tensors-and-gradients.ipynb) and run the cells in Google Colab.
 
+# Author: Andrés R. Bucheli.
+(Based in Udemy - Deep Learning with PyTorch - Zero to GANs)
 
 
